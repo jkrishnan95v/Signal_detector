@@ -1,0 +1,25 @@
+{
+  "exp_name": "exp_0",
+  "agent": "OneDCNNAgent",
+  "mode": "train",
+
+  "data_root": "data/0-4source_20snr_10k.h5",
+  "cuda": false,
+  "gpu_device": 0,
+  "seed": 1337,
+
+  "num_classes": 5,
+
+  "learning_rate": 0.01,
+  "lr_type": "cosine",
+  "weight_decay": 0.0001,
+  "momentum": 0.9,
+
+  "DROPOUT": 0.5,
+  
+  "checkpoint_file": "checkpoint.pth.tar",
+
+  "batch_size": 64,
+  "max_epoch": 100
+
+}
