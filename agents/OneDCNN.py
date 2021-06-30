@@ -32,14 +32,6 @@ from agents.base import BaseAgent
 from graphs.models.onedcnn import OneDCNN
 from graphs.losses.cross_entropy import CrossEntropyLoss
 
-'''
-with h5py.File('data/0-4source_20snr_100k.h5','r') as hdf: #Read hdf5 file and converts into a numpy aray
-    ls=list(hdf.keys())
-    print('Dataset List: \n', ls)
-    X =  np.array(hdf.get('extracted_x'))#extrated_x
-    y = np.array(hdf.get('target_y'))#target_y
-'''
-
 from tensorboardX import SummaryWriter
 from utils.metrics import AverageMeter, AverageMeterList, cls_accuracy, check_accuracy
 from utils.misc import print_cuda_statistics
@@ -47,7 +39,7 @@ from utils.train_utils import adjust_learning_rate
 
 cudnn.benchmark = True
 
-
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
 class OneDCNNAgent(BaseAgent):
     def __init__(self, config):
@@ -83,7 +75,7 @@ class OneDCNNAgent(BaseAgent):
             torch.cuda.manual_seed_all(self.config.seed)
             torch.cuda.set_device(self.config.gpu_device)
             self.logger.info("Operation will be on *****GPU-CUDA***** ")
-            print_cuda_statistics()
+            #print_cuda_statistics()
         else:
             self.device = torch.device("cpu")
             torch.manual_seed(self.config.seed)
@@ -174,6 +166,7 @@ class OneDCNNAgent(BaseAgent):
         self.model.train()
         # Initialize your average meters
         self.epoch_loss_tr = AverageMeter()
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
         top1_acc = AverageMeter()
         top5_acc = AverageMeter()
 
@@ -193,7 +186,11 @@ class OneDCNNAgent(BaseAgent):
             lr = adjust_learning_rate(self.optimizer, self.current_epoch, self.config, batch=current_batch,
                                       nBatch=self.data_loader.train_iterations)
             # model
+           
             pred = self.model(x)
+            pred = pred.to(device)
+            y = y.to(device)
+	
             # loss
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
@@ -204,7 +201,7 @@ class OneDCNNAgent(BaseAgent):
             self.optimizer.step()
 
            # top1, top5 = cls_accuracy(pred.data, y.data, topk=(1, 5))
-            self.train_accuracy = check_accuracy(self.data_loader.train_loader, self.model)
+           
             self.epoch_loss_tr.update(cur_loss.item())
            # top1_acc.update(top1.item(), x.size(0))
             #top5_acc.update(top5.item(), x.size(0))
@@ -215,7 +212,8 @@ class OneDCNNAgent(BaseAgent):
             self.summary_writer.add_scalar("epoch/loss", self.epoch_loss_tr.val, self.current_iteration)
             self.summary_writer.add_scalar("epoch/accuracy", self.train_accuracy, self.current_iteration)
         tqdm_batch.close()
-
+        self.train_accuracy = check_accuracy(self.data_loader.train_loader, self.model.cuda())
+       
         self.logger.info("Training at epoch-" + str(self.current_epoch) + " | " + "loss: " + str(
             self.epoch_loss_tr.val) + "- Training Acc: " + str(self.train_accuracy))
 
@@ -228,6 +226,7 @@ class OneDCNNAgent(BaseAgent):
                           desc="Valiation at -{}-".format(self.current_epoch))
 
         # set the model in training mode
+        
         self.model.eval()
 
         self.epoch_loss_val = AverageMeter()
@@ -242,8 +241,11 @@ class OneDCNNAgent(BaseAgent):
             y = y.squeeze_()
             y = torch.tensor(y, dtype=torch.long)
             # model
+          
             pred = self.model(x)
             # loss
+            y = y.to(device)
+            pred = pred.to(device)
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
                 raise ValueError('Loss is nan during validation...')
@@ -292,7 +294,10 @@ class OneDCNNAgent(BaseAgent):
             lr = adjust_learning_rate(self.optimizer, self.current_epoch, self.config, batch=current_batch,
                                       nBatch=self.data_loader.test_iterations)
             # model
+            
             pred = self.model(x)
+            y = y.to(device)
+            pred = pred.to(device)
             # loss
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
