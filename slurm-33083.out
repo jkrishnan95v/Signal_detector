@@ -1,0 +1,2 @@
+/var/spool/slurm/d/job33083/slurm_script: line 18: cd: ../Lab1: No such file or directory
+ TRAINING CNN ON ARRAY COVS 
