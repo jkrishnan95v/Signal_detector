@@ -7,7 +7,7 @@ Created on Mon Jun  7 12:53:34 2021
 """
 
 """
-Cross Entropy 2D for CondenseNet
+Cross Entropy 
 """
 
 
