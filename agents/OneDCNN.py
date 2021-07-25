@@ -29,8 +29,18 @@ from torch.utils.data import Dataset, DataLoader
 
 from datasets.auto_covariances import covariance_dataloader
 from agents.base import BaseAgent
-from graphs.models.onedcnn import OneDCNN
+from graphs.models.onedcnn2 import OneDCNN
+from graphs.models.onedcnn2 import NeuralNet
+
 from graphs.losses.cross_entropy import CrossEntropyLoss
+
+'''
+with h5py.File('data/0-4source_20snr_100k.h5','r') as hdf: #Read hdf5 file and converts into a numpy aray
+    ls=list(hdf.keys())
+    print('Dataset List: \n', ls)
+    X =  np.array(hdf.get('extracted_x'))#extrated_x
+    y = np.array(hdf.get('target_y'))#target_y
+'''
 
 from tensorboardX import SummaryWriter
 from utils.metrics import AverageMeter, AverageMeterList, cls_accuracy, check_accuracy
@@ -39,13 +49,14 @@ from utils.train_utils import adjust_learning_rate
 
 cudnn.benchmark = True
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
     
 class OneDCNNAgent(BaseAgent):
     def __init__(self, config):
         super().__init__(config)
         # Create an instance from the Model
         self.model = OneDCNN(self.config)
+        #self.model = NeuralNet(self.config)
         # Create an instance from the data loader
         self.data_loader = covariance_dataloader(self.config)
         # Create instance from the loss
@@ -186,10 +197,10 @@ class OneDCNNAgent(BaseAgent):
             lr = adjust_learning_rate(self.optimizer, self.current_epoch, self.config, batch=current_batch,
                                       nBatch=self.data_loader.train_iterations)
             # model
-           
+            
             pred = self.model(x)
-            pred = pred.to(device)
-            y = y.to(device)
+            
+            y = y.to('cpu')
 	
             # loss
             cur_loss = self.loss(pred, y)
@@ -201,7 +212,7 @@ class OneDCNNAgent(BaseAgent):
             self.optimizer.step()
 
            # top1, top5 = cls_accuracy(pred.data, y.data, topk=(1, 5))
-           
+            
             self.epoch_loss_tr.update(cur_loss.item())
            # top1_acc.update(top1.item(), x.size(0))
             #top5_acc.update(top5.item(), x.size(0))
@@ -212,8 +223,8 @@ class OneDCNNAgent(BaseAgent):
             self.summary_writer.add_scalar("epoch/loss", self.epoch_loss_tr.val, self.current_iteration)
             self.summary_writer.add_scalar("epoch/accuracy", self.train_accuracy, self.current_iteration)
         tqdm_batch.close()
-        self.train_accuracy = check_accuracy(self.data_loader.train_loader, self.model.cuda())
-       
+
+        self.train_accuracy = check_accuracy(self.data_loader.train_loader, self.model)        
         self.logger.info("Training at epoch-" + str(self.current_epoch) + " | " + "loss: " + str(
             self.epoch_loss_tr.val) + "- Training Acc: " + str(self.train_accuracy))
 
@@ -227,7 +238,7 @@ class OneDCNNAgent(BaseAgent):
 
         # set the model in training mode
         
-        self.model.eval()
+        
 
         self.epoch_loss_val = AverageMeter()
         top1_acc = AverageMeter()
@@ -241,11 +252,11 @@ class OneDCNNAgent(BaseAgent):
             y = y.squeeze_()
             y = torch.tensor(y, dtype=torch.long)
             # model
-          
+            
             pred = self.model(x)
             # loss
-            y = y.to(device)
-            pred = pred.to(device)
+            y = y.to('cpu')
+            pred = pred.to('cpu')
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
                 raise ValueError('Loss is nan during validation...')
@@ -296,8 +307,9 @@ class OneDCNNAgent(BaseAgent):
             # model
             
             pred = self.model(x)
-            y = y.to(device)
-            pred = pred.to(device)
+            #device = "cpu"
+            #y = y.to('device')
+            #pred = pred.to('device')
             # loss
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
@@ -354,10 +366,10 @@ class OneDCNNAgent(BaseAgent):
                 inputs, labels = data
         #inputs = inputs.to(device)
        # classes = classes.to(device)
-            outputs = self.model(inputs)
-            _, preds = torch.max(outputs, 1)
-            for t, p in zip(labels.view(-1), preds.view(-1)):
-                    confusion_matrix[t.long(), p.long()] += 1
+                outputs = self.model(inputs)
+                _, preds = torch.max(outputs, 1)
+                for t, p in zip(labels.view(-1), preds.view(-1)):
+                        confusion_matrix[t.long(), p.long()] += 1
 
         print(confusion_matrix)
         print(confusion_matrix.diag()/confusion_matrix.sum(1))
@@ -418,6 +430,7 @@ class OneDCNNAgent(BaseAgent):
         self.data_loader.finalize()
         self.plotter()
         self.cmap()
+        self.device = "cpu"
         self.test()
         self.store_scalars()
         
