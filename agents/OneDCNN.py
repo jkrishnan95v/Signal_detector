@@ -18,7 +18,11 @@ import json
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+#plt.rcParams.update({'font.size': 16})
+import scikitplot as skplt
 
+from sklearn.preprocessing import label_binarize
+from sklearn.metrics import roc_curve, auc
 
 import torch
 from torch import nn
@@ -31,6 +35,8 @@ from datasets.auto_covariances import covariance_dataloader
 from agents.base import BaseAgent
 from graphs.models.onedcnn2 import OneDCNN
 from graphs.models.onedcnn2 import NeuralNet
+from graphs.models.resnet_model import resnet34
+from graphs.models.resnet_m2 import resnet50
 
 from graphs.losses.cross_entropy import CrossEntropyLoss
 
@@ -55,7 +61,9 @@ class OneDCNNAgent(BaseAgent):
     def __init__(self, config):
         super().__init__(config)
         # Create an instance from the Model
-        self.model = OneDCNN(self.config)
+        #self.model = OneDCNN(self.config)
+        self.model = resnet50(config)
+        #self.model = resnet34(self.config)
         #self.model = NeuralNet(self.config)
         # Create an instance from the data loader
         self.data_loader = covariance_dataloader(self.config)
@@ -200,7 +208,7 @@ class OneDCNNAgent(BaseAgent):
             
             pred = self.model(x)
             
-            y = y.to('cpu')
+            y = y.to(self.device)
 	
             # loss
             cur_loss = self.loss(pred, y)
@@ -224,7 +232,7 @@ class OneDCNNAgent(BaseAgent):
             self.summary_writer.add_scalar("epoch/accuracy", self.train_accuracy, self.current_iteration)
         tqdm_batch.close()
 
-        self.train_accuracy = check_accuracy(self.data_loader.train_loader, self.model)        
+        self.train_accuracy = check_accuracy(self.data_loader.train_loader, self.model, self.config.batch_size)        
         self.logger.info("Training at epoch-" + str(self.current_epoch) + " | " + "loss: " + str(
             self.epoch_loss_tr.val) + "- Training Acc: " + str(self.train_accuracy))
 
@@ -255,14 +263,14 @@ class OneDCNNAgent(BaseAgent):
             
             pred = self.model(x)
             # loss
-            y = y.to('cpu')
-            pred = pred.to('cpu')
+            y = y.to(self.device)
+            pred = pred.to(self.device)
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
                 raise ValueError('Loss is nan during validation...')
 
            # top1, top5 = cls_accuracy(pred.data, y.data, topk=(1, 5))
-            self.valid_accuracy = check_accuracy(self.data_loader.valid_loader, self.model)
+            self.valid_accuracy = check_accuracy(self.data_loader.valid_loader, self.model,self.config.batch_size)
             self.epoch_loss_val.update(cur_loss.item())
             #top1_acc.update(top1.item(), x.size(0))
             #op5_acc.update(top5.item(), x.size(0))
@@ -320,7 +328,7 @@ class OneDCNNAgent(BaseAgent):
             self.optimizer.step()
 
            # top1, top5 = cls_accuracy(pred.data, y.data, topk=(1, 5))
-            self.test_accuracy = check_accuracy(self.data_loader.test_loader, self.model)
+            self.test_accuracy = check_accuracy(self.data_loader.test_loader, self.model, self.config.batch_size)
             self.epoch_loss_test.update(cur_loss.item())
            # top1_acc.update(top1.item(), x.size(0))
             #top5_acc.update(top5.item(), x.size(0))
@@ -341,19 +349,30 @@ class OneDCNNAgent(BaseAgent):
     def plotter(self):
         
         fig = plt.figure(0)
-        plt.plot(self.validation_accuracy_list)
+        #plt.plot(self.validation_accuracy_list, label = 'Tr. acc.')
         plt.xlabel('Iterations  ')
-        plt.ylabel('Loss') 
-        plt.title('Validation Accuracy')
-        fig.savefig(self.config.out_dir + 'taccuracy.png')
+        plt.ylabel('Accuracy') 
+        #plt.title(' Training and validation accuracy')
+        #fig.savefig(self.config.out_dir + 'taccuracy.eps', format = 'eps')
 
 
-        fig2 =  plt.figure(1)
-        plt.plot(self.training_accuracy_list)
+        #fig2 =  plt.figure(1)
+       # plt.plot(self.training_accuracy_list, label = 'Val. acc.')
         plt.xlabel('Iterations  ')
-        plt.ylabel('Loss') 
-        plt.title('Training Accuracy')
-        fig2.savefig(self.config.out_dir + 'vaccuracy.png')
+        plt.ylabel('Accuracy')
+        plt.legend()
+        
+        mytuple = list(zip(self.training_accuracy_list, self.validation_accuracy_list))
+        dfplot = pd.DataFrame(mytuple, columns = ['Training_accuracy', 'Validation_accuracy'])
+        dfplot2 = dfplot.reset_index().melt(id_vars = 'index')
+        sns.set_style("darkgrid")
+        dfplot2 = dfplot2.rename(columns = {"index": "Epochs", "value": "Accuracy"})
+        figurep = sns.lineplot(data = dfplot2, x = 'Epochs', y = 'Accuracy', hue = 'variable', palette = ['red', 'blue'])
+       # figurep.savefig(self.config.out_dir + 'aplots.png', dpi=1200)
+        plt.savefig(self.config.out_dir + 'accuracyplots.png')
+        plt.show()
+#        plt.title(('Accuracy')
+        #fig2.savefig(self.config.out_dir + 'vaccuracy.png')
         
     def cmap(self):
         
@@ -376,6 +395,7 @@ class OneDCNNAgent(BaseAgent):
         
         plt.figure(figsize=(15,10))
         class_names = [i for i in range(nb_classes)]
+        sns.set(font_scale = 2)
         df_cm = pd.DataFrame(confusion_matrix, index=class_names, columns=class_names).astype(int)
         heatmap = sns.heatmap(df_cm, annot=True, fmt="d")
         
@@ -383,9 +403,11 @@ class OneDCNNAgent(BaseAgent):
         heatmap.xaxis.set_ticklabels(heatmap.xaxis.get_ticklabels(), rotation=45, ha='right',fontsize=15)
         plt.ylabel('True label')
         plt.xlabel('Predicted label')
+        error = torch.ones(nb_classes)
     
-        figure = heatmap.get_figure()    
-        figure.savefig(self.config.out_dir + 'svm_conf.png', dpi=400)
+        figure1 = heatmap.get_figure()    
+        figure1.savefig(self.config.out_dir + 'svm_conf.png', dpi=400)
+        
 
         TP = confusion_matrix.diag()
         for c in range(nb_classes):
@@ -400,11 +422,88 @@ class OneDCNNAgent(BaseAgent):
             se = TP[c]/(TP[c]+FN)
             sp = TN/(TN+FP) 
             p = TP[c]/(TP[c] + FP)
+            
+            error[c] = (FP + FN) / (TP[c] + TN + FP + FN) 
+            
             print('Class {}\nTP {}, TN {}, FP {}, FN {}'.format(
                 c, TP[c], TN, FP, FN))
             print('Specificty of this class is ', sp )
             print('Sensitivity of this class is', se)
             print('Precision is ara ara', p)
+        
+       
+        
+    def boxxer(self):
+        
+        self.config.mode = 'test'
+        with torch.no_grad():
+            for i, data in enumerate(self.data_loader.test_loader, 0):
+                inputs, labels = data
+                labels = labels.squeeze_()
+                outputs = self.model(inputs)
+                _, preds = torch.max(outputs, 1)
+                y = preds.flatten().numpy()
+        
+        df = pd.DataFrame(data={'Predictions': y, 'Number of signals': labels})
+        
+        plt.figure()
+        
+
+        ax = sns.boxplot(x="Number of signals", y="Predictions", data=df)
+        ax.get_figure().savefig(self.config.out_dir + 'box_plot.png', dpi=1200)
+        plt.figure()
+        ax2 = sns.swarmplot(x="Number of signals", y="Predictions", data=df)
+        ax2.get_figure().savefig(self.config.out_dir + 'swarm_plot.png', dpi=1200)
+
+         
+        
+                
+    def roc(self):
+        
+        self.config.mode = 'test'
+        with torch.no_grad():
+            for i, data in enumerate(self.data_loader.test_loader, 0):
+                inputs, labels = data
+                labels = labels.squeeze_()
+                outputs = self.model(inputs)
+                _, preds = torch.max(outputs, 1)
+                y = preds.flatten().numpy()
+        
+        nb_classes = self.config.num_classes
+
+        class_names = [i for i in range(nb_classes)]
+        y = label_binarize(y, class_names)
+        labels = label_binarize(labels, class_names)
+        
+        fpr = dict()
+        tpr = dict()
+        roc_auc = dict()
+        for i in range(nb_classes):
+            fpr[i], tpr[i], _ = roc_curve(labels[:, i], y[:, i])
+            roc_auc[i] = auc(fpr[i], tpr[i])
+        
+        # Plot of a ROC curve for a specific class
+        for i in range(nb_classes):
+            fig = plt.figure()
+            
+            plt.plot(fpr[i], tpr[i],"r-", label='ROC (area = %0.2f)' % roc_auc[i])
+            plt.plot([0, 1], [0, 1], 'k--')
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.05])
+            plt.xlabel('False Positive Rate')
+            plt.ylabel('True Positive Rate')
+            plt.title('ROC')
+            plt.legend(loc="lower right")
+            fig1 = plt.gcf()
+            #plt.show()
+            #fig.savefig(self.config.out_dir + '%s.eps' % (str(nb_classes[i])), format = 'eps')
+            fig1.savefig(self.config.out_dir + "Instant{}.eps".format(i), format = 'eps')
+            #sns.lineplot(x = fpr[i], y = tpr[i], palette = "flare")
+            
+            #fig.savefig(self.config.out_dir + str(nb_classes[i]) + 'th_roc.png')
+            
+            
+            
 
         
     def store_scalars(self):
@@ -429,8 +528,11 @@ class OneDCNNAgent(BaseAgent):
        
         self.data_loader.finalize()
         self.plotter()
-        self.cmap()
+        
         self.device = "cpu"
         self.test()
+        self.cmap()
+        self.boxxer()
+        self.roc()
         self.store_scalars()
         
