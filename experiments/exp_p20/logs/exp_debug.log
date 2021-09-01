@@ -1,0 +1,417 @@
+[INFO] - 2021-08-26 08:29:51,848 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-26 08:29:51,848 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-26 08:29:51,848 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-26 08:29:55,905 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-26 08:29:55,911 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-26 08:30:00,663 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-26 08:30:00,664 - Agent - : No checkpoint exists from 'experiments/exp_p20/checkpoints/'. Skipping... in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:142
+[INFO] - 2021-08-26 08:30:00,664 - Agent - : **First time to train** in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:143
+[INFO] - 2021-08-26 08:30:35,375 - Agent - : Training at epoch-0 | loss: 1.228201030075084- Training Acc: 58.92333333333334 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:33:18,241 - Agent - : Validation results at epoch-0 | loss: 1.0113518780963435- Accuracy: 58.02 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:33:47,873 - Agent - : Training at epoch-1 | loss: 0.9425796074230111- Training Acc: 63.60777777777778 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:36:31,561 - Agent - : Validation results at epoch-1 | loss: 0.8922759552670133- Accuracy: 62.470000000000006 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:37:00,946 - Agent - : Training at epoch-2 | loss: 0.8531715555146983- Training Acc: 66.9 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:39:43,873 - Agent - : Validation results at epoch-2 | loss: 0.8074967200589028- Accuracy: 66.12 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:40:13,137 - Agent - : Training at epoch-3 | loss: 0.7865481100441635- Training Acc: 68.49444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:42:55,434 - Agent - : Validation results at epoch-3 | loss: 0.742361481022683- Accuracy: 67.64 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:43:25,066 - Agent - : Training at epoch-4 | loss: 0.7356630786776797- Training Acc: 69.23777777777778 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:46:08,436 - Agent - : Validation results at epoch-4 | loss: 0.7041738481278632- Accuracy: 68.30000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:46:37,641 - Agent - : Training at epoch-5 | loss: 0.6964334776279515- Training Acc: 71.55666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:49:19,979 - Agent - : Validation results at epoch-5 | loss: 0.6717183124867214- Accuracy: 70.78 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:49:49,463 - Agent - : Training at epoch-6 | loss: 0.6627354774181946- Training Acc: 71.94111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:52:32,428 - Agent - : Validation results at epoch-6 | loss: 0.6354165208187832- Accuracy: 70.78999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:53:01,366 - Agent - : Training at epoch-7 | loss: 0.6322211847503556- Training Acc: 74.66000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:55:44,729 - Agent - : Validation results at epoch-7 | loss: 0.603535228474125- Accuracy: 73.42999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:56:14,313 - Agent - : Training at epoch-8 | loss: 0.6103427100029073- Training Acc: 74.86333333333334 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 08:58:56,592 - Agent - : Validation results at epoch-8 | loss: 0.5873214004525713- Accuracy: 73.65 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 08:59:26,263 - Agent - : Training at epoch-9 | loss: 0.5919165684131332- Training Acc: 75.41555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:02:09,132 - Agent - : Validation results at epoch-9 | loss: 0.5751863554784447- Accuracy: 73.97 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:02:38,112 - Agent - : Training at epoch-10 | loss: 0.575500398471835- Training Acc: 76.34 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:05:21,368 - Agent - : Validation results at epoch-10 | loss: 0.5547016635062588- Accuracy: 75.36 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:05:50,660 - Agent - : Training at epoch-11 | loss: 0.561430400622679- Training Acc: 76.05666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:08:33,206 - Agent - : Validation results at epoch-11 | loss: 0.5669992047889977- Accuracy: 75.11 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:09:02,563 - Agent - : Training at epoch-12 | loss: 0.5489959384883306- Training Acc: 77.45777777777778 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:11:45,983 - Agent - : Validation results at epoch-12 | loss: 0.5301338542418875- Accuracy: 76.48 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:12:14,980 - Agent - : Training at epoch-13 | loss: 0.5365382183419954- Training Acc: 76.79555555555555 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:14:57,677 - Agent - : Validation results at epoch-13 | loss: 0.5346096623095737- Accuracy: 75.72 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:15:26,787 - Agent - : Training at epoch-14 | loss: 0.5262553018505216- Training Acc: 78.8411111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:18:09,266 - Agent - : Validation results at epoch-14 | loss: 0.5108497642028104- Accuracy: 77.73 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:18:38,823 - Agent - : Training at epoch-15 | loss: 0.516384499434808- Training Acc: 78.44444444444446 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:21:21,353 - Agent - : Validation results at epoch-15 | loss: 0.49763327286501596- Accuracy: 77.4 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:21:51,001 - Agent - : Training at epoch-16 | loss: 0.5091234840606237- Training Acc: 80.20666666666668 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:24:34,773 - Agent - : Validation results at epoch-16 | loss: 0.4901741152736032- Accuracy: 79.08 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:25:03,958 - Agent - : Training at epoch-17 | loss: 0.5007976393116732- Training Acc: 80.1211111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:27:45,813 - Agent - : Validation results at epoch-17 | loss: 0.4809350519423272- Accuracy: 78.97 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:28:14,435 - Agent - : Training at epoch-18 | loss: 0.49421502258986044- Training Acc: 79.4211111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:30:56,072 - Agent - : Validation results at epoch-18 | loss: 0.4879487420722937- Accuracy: 78.13 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:31:25,393 - Agent - : Training at epoch-19 | loss: 0.48673445492580414- Training Acc: 79.57333333333332 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:34:06,901 - Agent - : Validation results at epoch-19 | loss: 0.47830843792599476- Accuracy: 78.24 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:34:36,179 - Agent - : Training at epoch-20 | loss: 0.47964863181537826- Training Acc: 79.79888888888888 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:37:18,728 - Agent - : Validation results at epoch-20 | loss: 0.47156798763639607- Accuracy: 78.06 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:37:47,664 - Agent - : Training at epoch-21 | loss: 0.4742260595628702- Training Acc: 80.44555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:40:30,949 - Agent - : Validation results at epoch-21 | loss: 0.4549488551487589- Accuracy: 79.09 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:41:00,520 - Agent - : Training at epoch-22 | loss: 0.4670875541648716- Training Acc: 81.0488888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:43:43,055 - Agent - : Validation results at epoch-22 | loss: 0.46250504938660153- Accuracy: 79.82000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:44:12,412 - Agent - : Training at epoch-23 | loss: 0.4624858758893518- Training Acc: 81.86 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:46:54,501 - Agent - : Validation results at epoch-23 | loss: 0.4548447329527254- Accuracy: 80.57 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:47:23,857 - Agent - : Training at epoch-24 | loss: 0.45545376973874024- Training Acc: 81.93555555555555 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:50:07,399 - Agent - : Validation results at epoch-24 | loss: 0.45176796396826485- Accuracy: 80.75 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:50:37,164 - Agent - : Training at epoch-25 | loss: 0.4484633102684726- Training Acc: 82.24666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:53:19,839 - Agent - : Validation results at epoch-25 | loss: 0.44008488915148813- Accuracy: 80.97999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:53:48,456 - Agent - : Training at epoch-26 | loss: 0.44305981944534234- Training Acc: 82.36444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:56:30,760 - Agent - : Validation results at epoch-26 | loss: 0.4343593092101395- Accuracy: 81.05 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 09:57:00,397 - Agent - : Training at epoch-27 | loss: 0.43712611457262807- Training Acc: 82.67555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 09:59:42,573 - Agent - : Validation results at epoch-27 | loss: 0.42392299376475584- Accuracy: 81.19 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:00:11,289 - Agent - : Training at epoch-28 | loss: 0.43202046356306234- Training Acc: 82.16222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:02:52,609 - Agent - : Validation results at epoch-28 | loss: 0.4155555813555505- Accuracy: 80.74 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:03:21,274 - Agent - : Training at epoch-29 | loss: 0.42607011473932926- Training Acc: 82.46111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:06:03,024 - Agent - : Validation results at epoch-29 | loss: 0.4244325605167705- Accuracy: 81.26 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:06:32,050 - Agent - : Training at epoch-30 | loss: 0.4212529850116247- Training Acc: 83.3711111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:09:14,291 - Agent - : Validation results at epoch-30 | loss: 0.40591177828372665- Accuracy: 81.58 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:09:43,115 - Agent - : Training at epoch-31 | loss: 0.41367025367317256- Training Acc: 83.77222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:12:26,292 - Agent - : Validation results at epoch-31 | loss: 0.412469284075081- Accuracy: 82.12 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:12:56,109 - Agent - : Training at epoch-32 | loss: 0.4091728398815994- Training Acc: 84.07777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:15:39,281 - Agent - : Validation results at epoch-32 | loss: 0.395825791320983- Accuracy: 82.71 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:16:08,854 - Agent - : Training at epoch-33 | loss: 0.4026529627991807- Training Acc: 84.92333333333333 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:18:51,408 - Agent - : Validation results at epoch-33 | loss: 0.39105590912187177- Accuracy: 83.19 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:19:20,897 - Agent - : Training at epoch-34 | loss: 0.3997696523197848- Training Acc: 84.55555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:22:04,377 - Agent - : Validation results at epoch-34 | loss: 0.3859224165700803- Accuracy: 82.94 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:22:33,330 - Agent - : Training at epoch-35 | loss: 0.3953480474179572- Training Acc: 84.56444444444445 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:25:16,267 - Agent - : Validation results at epoch-35 | loss: 0.3829141576199015- Accuracy: 82.6 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:25:45,955 - Agent - : Training at epoch-36 | loss: 0.38827597365238686- Training Acc: 84.56555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:28:28,638 - Agent - : Validation results at epoch-36 | loss: 0.3777281366715765- Accuracy: 82.6 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:28:58,289 - Agent - : Training at epoch-37 | loss: 0.3849268992297092- Training Acc: 84.52333333333333 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:31:41,705 - Agent - : Validation results at epoch-37 | loss: 0.3794051295822593- Accuracy: 82.39999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:32:10,804 - Agent - : Training at epoch-38 | loss: 0.3819708284453966- Training Acc: 85.47 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:34:53,518 - Agent - : Validation results at epoch-38 | loss: 0.38007516209866593- Accuracy: 83.19 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:35:23,129 - Agent - : Training at epoch-39 | loss: 0.3766426971366241- Training Acc: 86.11222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:38:05,713 - Agent - : Validation results at epoch-39 | loss: 0.3621516816175667- Accuracy: 84.26 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:38:35,148 - Agent - : Training at epoch-40 | loss: 0.371297355410302- Training Acc: 85.16777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:41:18,738 - Agent - : Validation results at epoch-40 | loss: 0.36289337875357097- Accuracy: 82.86 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:41:47,745 - Agent - : Training at epoch-41 | loss: 0.3668372009079255- Training Acc: 86.47555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:44:30,285 - Agent - : Validation results at epoch-41 | loss: 0.355699414565305- Accuracy: 84.31 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:44:59,960 - Agent - : Training at epoch-42 | loss: 0.36463774570185153- Training Acc: 86.44333333333334 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:47:42,612 - Agent - : Validation results at epoch-42 | loss: 0.35530870232232814- Accuracy: 84.14 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:48:11,543 - Agent - : Training at epoch-43 | loss: 0.35964446558796437- Training Acc: 86.05888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:50:54,171 - Agent - : Validation results at epoch-43 | loss: 0.3683400775786418- Accuracy: 84.22 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:51:24,044 - Agent - : Training at epoch-44 | loss: 0.357004092456859- Training Acc: 86.89222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:54:08,687 - Agent - : Validation results at epoch-44 | loss: 0.3487745105840598- Accuracy: 84.95 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:54:37,262 - Agent - : Training at epoch-45 | loss: 0.3528125483831278- Training Acc: 86.89222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 10:57:19,291 - Agent - : Validation results at epoch-45 | loss: 0.35268709822824806- Accuracy: 84.81 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 10:57:48,301 - Agent - : Training at epoch-46 | loss: 0.34872629461173227- Training Acc: 86.34777777777778 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:00:29,942 - Agent - : Validation results at epoch-46 | loss: 0.3465604333171419- Accuracy: 83.98 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:00:58,999 - Agent - : Training at epoch-47 | loss: 0.3453747366515982- Training Acc: 87.76 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:03:41,144 - Agent - : Validation results at epoch-47 | loss: 0.3435230244686649- Accuracy: 85.45 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:04:09,826 - Agent - : Training at epoch-48 | loss: 0.3411010061923544- Training Acc: 87.30777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:06:52,247 - Agent - : Validation results at epoch-48 | loss: 0.3418025799617646- Accuracy: 85.05 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:07:21,718 - Agent - : Training at epoch-49 | loss: 0.3387422177413718- Training Acc: 86.98222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:10:04,415 - Agent - : Validation results at epoch-49 | loss: 0.34589537721910296- Accuracy: 84.89 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:10:33,989 - Agent - : Training at epoch-50 | loss: 0.33465568714939964- Training Acc: 87.16555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:13:16,774 - Agent - : Validation results at epoch-50 | loss: 0.33585509002968006- Accuracy: 84.63000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:13:46,288 - Agent - : Training at epoch-51 | loss: 0.3320433622717264- Training Acc: 85.95666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:16:30,166 - Agent - : Validation results at epoch-51 | loss: 0.3669055056799749- Accuracy: 84.39999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:17:00,114 - Agent - : Training at epoch-52 | loss: 0.33002816241263666- Training Acc: 88.38777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:19:42,626 - Agent - : Validation results at epoch-52 | loss: 0.3209760463351657- Accuracy: 85.89 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:20:11,655 - Agent - : Training at epoch-53 | loss: 0.32652095223921956- Training Acc: 88.79444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:22:53,894 - Agent - : Validation results at epoch-53 | loss: 0.32287247564382615- Accuracy: 86.19 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:23:22,439 - Agent - : Training at epoch-54 | loss: 0.32380637700200166- Training Acc: 88.74111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:26:04,220 - Agent - : Validation results at epoch-54 | loss: 0.3167281886384745- Accuracy: 86.31 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:26:33,416 - Agent - : Training at epoch-55 | loss: 0.3213789902770443- Training Acc: 88.44888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:29:15,224 - Agent - : Validation results at epoch-55 | loss: 0.3228756554756954- Accuracy: 85.92999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:29:44,257 - Agent - : Training at epoch-56 | loss: 0.3170614950014669- Training Acc: 88.11666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:32:27,205 - Agent - : Validation results at epoch-56 | loss: 0.33354073307316773- Accuracy: 85.8 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:32:56,735 - Agent - : Training at epoch-57 | loss: 0.3161004872803325- Training Acc: 89.1211111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:35:40,171 - Agent - : Validation results at epoch-57 | loss: 0.3105130772681753- Accuracy: 86.31 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:36:09,764 - Agent - : Training at epoch-58 | loss: 0.3148988171426981- Training Acc: 89.21444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:38:54,838 - Agent - : Validation results at epoch-58 | loss: 0.3119573209695755- Accuracy: 86.38 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:39:24,333 - Agent - : Training at epoch-59 | loss: 0.31043202037623185- Training Acc: 89.30222222222223 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:42:05,777 - Agent - : Validation results at epoch-59 | loss: 0.3119505638149893- Accuracy: 86.58 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:42:34,772 - Agent - : Training at epoch-60 | loss: 0.308741229429428- Training Acc: 89.47 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:45:16,621 - Agent - : Validation results at epoch-60 | loss: 0.30450798181971167- Accuracy: 86.48 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:45:45,634 - Agent - : Training at epoch-61 | loss: 0.30710230741250066- Training Acc: 90.05888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:48:27,699 - Agent - : Validation results at epoch-61 | loss: 0.3018185117631961- Accuracy: 86.97 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:48:56,365 - Agent - : Training at epoch-62 | loss: 0.30393117233083533- Training Acc: 89.03999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:51:39,031 - Agent - : Validation results at epoch-62 | loss: 0.31560443113943576- Accuracy: 86.75 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:52:08,409 - Agent - : Training at epoch-63 | loss: 0.3014502973741221- Training Acc: 89.96555555555555 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:54:51,587 - Agent - : Validation results at epoch-63 | loss: 0.3018810457674561- Accuracy: 86.8 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:55:21,317 - Agent - : Training at epoch-64 | loss: 0.30132713398148847- Training Acc: 90.27666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 11:58:04,320 - Agent - : Validation results at epoch-64 | loss: 0.2976651224930575- Accuracy: 87.15 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 11:58:33,467 - Agent - : Training at epoch-65 | loss: 0.297582378657303- Training Acc: 89.88111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:01:16,596 - Agent - : Validation results at epoch-65 | loss: 0.2998914399724098- Accuracy: 86.91 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:01:46,013 - Agent - : Training at epoch-66 | loss: 0.29809914341867605- Training Acc: 90.32777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:04:28,887 - Agent - : Validation results at epoch-66 | loss: 0.29257022727067306- Accuracy: 87.17 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:04:58,636 - Agent - : Training at epoch-67 | loss: 0.2962984074577001- Training Acc: 90.05666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:07:41,540 - Agent - : Validation results at epoch-67 | loss: 0.2999278521461851- Accuracy: 87.2 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:08:10,304 - Agent - : Training at epoch-68 | loss: 0.2931878682075025- Training Acc: 90.22666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:10:54,081 - Agent - : Validation results at epoch-68 | loss: 0.29778663197140787- Accuracy: 86.87 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:11:23,936 - Agent - : Training at epoch-69 | loss: 0.29257880000883413- Training Acc: 90.58888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:14:06,182 - Agent - : Validation results at epoch-69 | loss: 0.2912678091199535- Accuracy: 87.09 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:14:35,723 - Agent - : Training at epoch-70 | loss: 0.2901941484585669- Training Acc: 90.11555555555556 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:17:18,287 - Agent - : Validation results at epoch-70 | loss: 0.299840156439763- Accuracy: 87.14 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:17:47,817 - Agent - : Training at epoch-71 | loss: 0.288296541584326- Training Acc: 89.89 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:20:30,881 - Agent - : Validation results at epoch-71 | loss: 0.3036765038587485- Accuracy: 86.56 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:21:00,239 - Agent - : Training at epoch-72 | loss: 0.2871093046351706- Training Acc: 90.58444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:23:44,664 - Agent - : Validation results at epoch-72 | loss: 0.29084274353115425- Accuracy: 87.37 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:24:14,354 - Agent - : Training at epoch-73 | loss: 0.28634573854956125- Training Acc: 90.99222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:26:55,975 - Agent - : Validation results at epoch-73 | loss: 0.2880320029843385- Accuracy: 87.55 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:27:25,171 - Agent - : Training at epoch-74 | loss: 0.28629134408997237- Training Acc: 91.02333333333334 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:30:07,054 - Agent - : Validation results at epoch-74 | loss: 0.28814751336908645- Accuracy: 87.55 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:30:36,008 - Agent - : Training at epoch-75 | loss: 0.283403217792511- Training Acc: 90.50666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:33:17,835 - Agent - : Validation results at epoch-75 | loss: 0.2932739171442712- Accuracy: 87.08 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:33:46,852 - Agent - : Training at epoch-76 | loss: 0.2837751029057967- Training Acc: 91.05888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:36:29,119 - Agent - : Validation results at epoch-76 | loss: 0.2836026886276379- Accuracy: 87.61 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:36:58,398 - Agent - : Training at epoch-77 | loss: 0.2834777736820561- Training Acc: 91.32111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:39:41,718 - Agent - : Validation results at epoch-77 | loss: 0.2847985545541071- Accuracy: 87.92999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:40:11,446 - Agent - : Training at epoch-78 | loss: 0.2814060229842512- Training Acc: 91.08111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:42:55,209 - Agent - : Validation results at epoch-78 | loss: 0.28457506646396247- Accuracy: 87.61 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:43:25,112 - Agent - : Training at epoch-79 | loss: 0.2774468268179775- Training Acc: 91.11 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:46:07,794 - Agent - : Validation results at epoch-79 | loss: 0.2861495787740513- Accuracy: 87.83 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:46:36,667 - Agent - : Training at epoch-80 | loss: 0.27908890976093303- Training Acc: 91.10888888888888 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:49:18,469 - Agent - : Validation results at epoch-80 | loss: 0.28419295095714037- Accuracy: 87.68 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:49:47,086 - Agent - : Training at epoch-81 | loss: 0.27818901845344685- Training Acc: 90.95777777777778 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:52:29,083 - Agent - : Validation results at epoch-81 | loss: 0.28432001107057947- Accuracy: 87.4 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:52:58,429 - Agent - : Training at epoch-82 | loss: 0.27744168483711085- Training Acc: 90.75111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:55:41,622 - Agent - : Validation results at epoch-82 | loss: 0.2917244842477665- Accuracy: 87.38 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:56:11,343 - Agent - : Training at epoch-83 | loss: 0.27745028270121236- Training Acc: 91.1211111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 12:58:55,034 - Agent - : Validation results at epoch-83 | loss: 0.2821318116157677- Accuracy: 87.62 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 12:59:24,461 - Agent - : Training at epoch-84 | loss: 0.27696571573773937- Training Acc: 91.25 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:02:06,569 - Agent - : Validation results at epoch-84 | loss: 0.28325416498882755- Accuracy: 87.72999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:02:35,432 - Agent - : Training at epoch-85 | loss: 0.2745357078275701- Training Acc: 90.94666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:05:17,660 - Agent - : Validation results at epoch-85 | loss: 0.28824156427839- Accuracy: 87.53 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:05:46,345 - Agent - : Training at epoch-86 | loss: 0.2734721272378927- Training Acc: 91.35444444444445 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:08:28,892 - Agent - : Validation results at epoch-86 | loss: 0.2820232965194496- Accuracy: 87.94 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:08:58,545 - Agent - : Training at epoch-87 | loss: 0.27696483312194536- Training Acc: 91.20444444444445 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:11:40,904 - Agent - : Validation results at epoch-87 | loss: 0.28116737116294305- Accuracy: 87.82 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:12:10,523 - Agent - : Training at epoch-88 | loss: 0.27458049629119247- Training Acc: 91.06444444444445 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:14:54,599 - Agent - : Validation results at epoch-88 | loss: 0.284162053351949- Accuracy: 87.56 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:15:23,801 - Agent - : Training at epoch-89 | loss: 0.2750151441422607- Training Acc: 91.06444444444445 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:18:06,874 - Agent - : Validation results at epoch-89 | loss: 0.28431163652307667- Accuracy: 87.78 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:18:36,468 - Agent - : Training at epoch-90 | loss: 0.2751620275993761- Training Acc: 90.96 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:21:19,606 - Agent - : Validation results at epoch-90 | loss: 0.2846221317341373- Accuracy: 87.55 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:21:48,949 - Agent - : Training at epoch-91 | loss: 0.2733958785150097- Training Acc: 91.09 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:24:32,151 - Agent - : Validation results at epoch-91 | loss: 0.2850087929493303- Accuracy: 87.58 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:25:01,620 - Agent - : Training at epoch-92 | loss: 0.2736212735957259- Training Acc: 91.27111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:27:44,568 - Agent - : Validation results at epoch-92 | loss: 0.2829377803073567- Accuracy: 87.83999999999999 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:28:14,273 - Agent - : Training at epoch-93 | loss: 0.2722744376272196- Training Acc: 91.32666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:30:57,091 - Agent - : Validation results at epoch-93 | loss: 0.28066814875906443- Accuracy: 87.76 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:31:26,231 - Agent - : Training at epoch-94 | loss: 0.27379551614610204- Training Acc: 91.15333333333334 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:34:09,164 - Agent - : Validation results at epoch-94 | loss: 0.28092798856413287- Accuracy: 87.69 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:34:38,616 - Agent - : Training at epoch-95 | loss: 0.2728287714461358- Training Acc: 91.39111111111112 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:37:21,932 - Agent - : Validation results at epoch-95 | loss: 0.27911016321296145- Accuracy: 87.76 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:37:50,929 - Agent - : Training at epoch-96 | loss: 0.2703157488598244- Training Acc: 91.44666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:40:34,323 - Agent - : Validation results at epoch-96 | loss: 0.2799269200130633- Accuracy: 87.9 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:41:03,956 - Agent - : Training at epoch-97 | loss: 0.27348252797304695- Training Acc: 91.24777777777778 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:43:46,318 - Agent - : Validation results at epoch-97 | loss: 0.2825489248249941- Accuracy: 87.77000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:44:15,843 - Agent - : Training at epoch-98 | loss: 0.2719767471641705- Training Acc: 91.19444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:46:58,782 - Agent - : Validation results at epoch-98 | loss: 0.2808203112547565- Accuracy: 87.7 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:47:28,187 - Agent - : Training at epoch-99 | loss: 0.2715945391470266- Training Acc: 91.24444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-26 13:50:12,898 - Agent - : Validation results at epoch-99 | loss: 0.28245437392003975- Accuracy: 87.81 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-26 13:50:12,929 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-26 13:50:13,105 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-26 13:52:56,033 - Agent - : Testing at epoch-99 | loss: 0.2783399154521098- Testing Acc: 91.24444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[WARNING] - 2021-08-26 13:53:06,334 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,335 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,416 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,416 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,494 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,494 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,571 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,571 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,648 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,648 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,799 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-26 13:53:06,799 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[INFO] - 2021-08-31 00:07:44,268 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 00:07:44,268 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 00:07:44,268 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 00:07:48,212 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 00:07:48,217 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 00:07:54,502 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 00:07:54,650 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 140700)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 00:08:27,493 - Agent - : Training at epoch-99 | loss: 0.27255550276305374- Training Acc: 91.28222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 00:10:58,984 - Agent - : Validation results at epoch-99 | loss: 0.2801317375177031- Accuracy: 87.81 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 00:10:59,115 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-31 00:10:59,194 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 00:13:31,828 - Agent - : Testing at epoch-99 | loss: 0.27691137880846195- Testing Acc: 91.28222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[INFO] - 2021-08-31 00:18:14,244 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 00:18:14,244 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 00:18:14,244 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 00:18:18,659 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 00:18:18,661 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 00:18:20,111 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 00:18:20,210 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 142107)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 00:18:51,003 - Agent - : Training at epoch-99 | loss: 0.2710242101759799- Training Acc: 91.5111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 00:21:21,914 - Agent - : Validation results at epoch-99 | loss: 0.27857518537788634- Accuracy: 87.88 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 00:21:22,041 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-31 00:21:22,089 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 00:23:54,104 - Agent - : Testing at epoch-99 | loss: 0.2759992761217105- Testing Acc: 91.5111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[INFO] - 2021-08-31 00:27:46,899 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 00:27:46,899 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 00:27:46,900 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 00:27:51,025 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 00:27:51,027 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 00:27:52,495 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 00:27:52,565 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 143514)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 00:28:23,270 - Agent - : Training at epoch-99 | loss: 0.27168397259102195- Training Acc: 90.88777777777779 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 00:30:56,019 - Agent - : Validation results at epoch-99 | loss: 0.28638849943686445- Accuracy: 87.47 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 00:30:56,149 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-31 00:30:56,197 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 00:33:30,518 - Agent - : Testing at epoch-99 | loss: 0.2791942908505725- Testing Acc: 90.88777777777779 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[INFO] - 2021-08-31 00:36:10,304 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 00:36:10,304 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 00:36:10,304 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 00:36:14,407 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 00:36:14,409 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 00:36:15,877 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 00:36:15,886 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 144921)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 00:36:47,114 - Agent - : Training at epoch-99 | loss: 0.2733253675017191- Training Acc: 91.21777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 00:39:20,516 - Agent - : Validation results at epoch-99 | loss: 0.28126287783027454- Accuracy: 87.56 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 00:39:20,569 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-31 00:39:20,735 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 00:41:55,338 - Agent - : Testing at epoch-99 | loss: 0.2776099006366578- Testing Acc: 91.21777777777777 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[WARNING] - 2021-08-31 00:42:04,551 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-31 00:42:04,552 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[INFO] - 2021-08-31 00:45:25,691 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 00:45:25,691 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 00:45:25,691 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 00:45:30,362 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 00:45:30,364 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 00:45:31,824 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 00:45:31,930 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 146328)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 00:46:02,324 - Agent - : Training at epoch-99 | loss: 0.27237429519070744- Training Acc: 91.12333333333333 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 00:48:32,095 - Agent - : Validation results at epoch-99 | loss: 0.28326313615224924- Accuracy: 87.72 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 00:48:32,126 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-31 00:48:32,269 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 00:51:03,178 - Agent - : Testing at epoch-99 | loss: 0.2785125534720482- Testing Acc: 91.12333333333333 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[WARNING] - 2021-08-31 00:51:12,273 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-31 00:51:12,279 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[INFO] - 2021-08-31 00:54:00,454 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 00:54:00,454 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 00:54:00,454 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 00:54:05,229 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 00:54:05,231 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 00:54:06,698 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 00:54:06,758 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 147735)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 00:54:37,278 - Agent - : Training at epoch-99 | loss: 0.2729615666655335- Training Acc: 91.41888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 00:57:06,382 - Agent - : Validation results at epoch-99 | loss: 0.2786815708420079- Accuracy: 87.98 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 00:57:06,413 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:527
+[WARNING] - 2021-08-31 00:57:06,481 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 00:59:36,596 - Agent - : Testing at epoch-99 | loss: 0.2764965870957466- Testing Acc: 91.41888888888889 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[WARNING] - 2021-08-31 00:59:45,650 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-31 00:59:45,652 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[INFO] - 2021-08-31 01:28:51,518 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 01:28:51,518 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 01:28:51,518 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 01:28:55,746 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 01:28:55,748 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 01:28:57,202 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 01:28:57,233 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 149142)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 01:29:27,987 - Agent - : Training at epoch-99 | loss: 0.2704872716040838- Training Acc: 91.36333333333333 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 01:31:59,273 - Agent - : Validation results at epoch-99 | loss: 0.280730479841779- Accuracy: 87.87 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 01:31:59,416 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:538
+[WARNING] - 2021-08-31 01:31:59,464 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 01:34:31,428 - Agent - : Testing at epoch-99 | loss: 0.27662977049495- Testing Acc: 91.36333333333333 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[INFO] - 2021-08-31 01:38:15,133 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 01:38:15,133 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 01:38:15,133 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 01:38:19,331 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 01:38:19,333 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 01:38:20,791 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 01:38:20,800 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 150549)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 01:38:51,542 - Agent - : Training at epoch-99 | loss: 0.2710394096463474- Training Acc: 91.20222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 01:41:21,318 - Agent - : Validation results at epoch-99 | loss: 0.2810167961629333- Accuracy: 87.69 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 01:41:21,404 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:538
+[WARNING] - 2021-08-31 01:41:21,452 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 01:43:52,376 - Agent - : Testing at epoch-99 | loss: 0.27805711917436804- Testing Acc: 91.20222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[INFO] - 2021-08-31 01:47:08,132 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 01:47:08,133 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 01:47:08,133 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 01:47:12,315 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 01:47:12,321 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:94
+[INFO] - 2021-08-31 01:47:13,773 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:131
+[INFO] - 2021-08-31 01:47:13,825 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 151956)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:140
+[INFO] - 2021-08-31 01:47:44,508 - Agent - : Training at epoch-99 | loss: 0.2728560411853831- Training Acc: 91.19444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:235
+[INFO] - 2021-08-31 01:50:17,122 - Agent - : Validation results at epoch-99 | loss: 0.28340506392299747- Accuracy: 87.77000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:277
+[INFO] - 2021-08-31 01:50:17,250 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:538
+[WARNING] - 2021-08-31 01:50:17,297 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 01:52:50,981 - Agent - : Testing at epoch-99 | loss: 0.277976959516668- Testing Acc: 91.19444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:342
+[INFO] - 2021-08-31 01:55:40,770 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 01:55:40,771 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 01:55:40,771 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 01:55:44,832 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 01:55:44,834 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:95
+[INFO] - 2021-08-31 01:55:46,305 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:132
+[INFO] - 2021-08-31 01:55:46,376 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 153363)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:141
+[INFO] - 2021-08-31 01:56:16,712 - Agent - : Training at epoch-99 | loss: 0.2715875445610255- Training Acc: 91.31222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:236
+[INFO] - 2021-08-31 01:58:46,515 - Agent - : Validation results at epoch-99 | loss: 0.280973175813438- Accuracy: 87.86 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:278
+[INFO] - 2021-08-31 01:58:46,646 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:539
+[WARNING] - 2021-08-31 01:58:46,694 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 02:01:17,654 - Agent - : Testing at epoch-99 | loss: 0.27719479025739013- Testing Acc: 91.31222222222222 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:343
+[INFO] - 2021-08-31 02:05:35,465 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 02:05:35,465 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 02:05:35,465 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 02:05:39,899 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 02:05:39,901 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:95
+[INFO] - 2021-08-31 02:05:41,372 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:132
+[INFO] - 2021-08-31 02:05:41,412 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 154770)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:141
+[INFO] - 2021-08-31 02:06:12,412 - Agent - : Training at epoch-99 | loss: 0.27359175525325025- Training Acc: 91.11666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:236
+[INFO] - 2021-08-31 02:08:44,761 - Agent - : Validation results at epoch-99 | loss: 0.2836656464133293- Accuracy: 87.75 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:278
+[INFO] - 2021-08-31 02:08:44,890 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:544
+[WARNING] - 2021-08-31 02:08:44,940 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 02:11:18,624 - Agent - : Testing at epoch-99 | loss: 0.2786293653356042- Testing Acc: 91.11666666666667 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:343
+[WARNING] - 2021-08-31 02:11:27,837 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-31 02:11:27,839 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[INFO] - 2021-08-31 02:23:06,447 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 02:23:06,447 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 02:23:06,447 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 02:23:10,468 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 02:23:10,470 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:95
+[INFO] - 2021-08-31 02:23:11,929 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:132
+[INFO] - 2021-08-31 02:23:12,009 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 156177)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:141
+[INFO] - 2021-08-31 02:23:42,996 - Agent - : Training at epoch-99 | loss: 0.27126050546140473- Training Acc: 91.43444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:236
+[INFO] - 2021-08-31 02:26:15,261 - Agent - : Validation results at epoch-99 | loss: 0.28096881100706234- Accuracy: 87.96000000000001 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:278
+[INFO] - 2021-08-31 02:26:15,356 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:545
+[WARNING] - 2021-08-31 02:26:15,405 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 02:28:48,467 - Agent - : Testing at epoch-99 | loss: 0.27643970186543315- Testing Acc: 91.43444444444444 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:343
+[WARNING] - 2021-08-31 02:28:57,702 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-31 02:28:57,703 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[INFO] - 2021-08-31 02:40:13,797 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 02:40:13,797 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 02:40:13,797 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 02:40:17,525 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 02:40:17,527 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:95
+[INFO] - 2021-08-31 02:40:18,989 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:132
+[INFO] - 2021-08-31 02:40:19,075 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 157584)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:141
+[INFO] - 2021-08-31 02:40:49,442 - Agent - : Training at epoch-99 | loss: 0.2735839895930541- Training Acc: 91.31666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:236
+[INFO] - 2021-08-31 02:43:19,712 - Agent - : Validation results at epoch-99 | loss: 0.2809979330012753- Accuracy: 87.81 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:278
+[INFO] - 2021-08-31 02:43:19,745 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:551
+[WARNING] - 2021-08-31 02:43:19,890 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 02:45:51,924 - Agent - : Testing at epoch-99 | loss: 0.27730122569260324- Testing Acc: 91.31666666666666 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:343
+[INFO] - 2021-08-31 02:47:16,641 - root - : Hi, This is root. in /users/jay/Lab2/sig_detect_v3/utils/config.py:101
+[INFO] - 2021-08-31 02:47:16,641 - root - : After the configurations are successfully processed and dirs are created. in /users/jay/Lab2/sig_detect_v3/utils/config.py:102
+[INFO] - 2021-08-31 02:47:16,641 - root - : The pipeline of the project will begin now. in /users/jay/Lab2/sig_detect_v3/utils/config.py:103
+[INFO] - 2021-08-31 02:47:20,522 - Array_DataLoader - : Loading DATA..... in /users/jay/Lab2/sig_detect_v3/datasets/auto_covariances.py:63
+[INFO] - 2021-08-31 02:47:20,524 - Agent - : Operation will be on *****GPU-CUDA*****  in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:95
+[INFO] - 2021-08-31 02:47:21,986 - Agent - : Loading checkpoint 'experiments/exp_p20/checkpoints/checkpoint.pth.tar' in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:132
+[INFO] - 2021-08-31 02:47:22,067 - Agent - : Checkpoint loaded successfully from 'experiments/exp_p20/checkpoints/' at (epoch 99) at (iteration 158991)
+ in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:141
+[INFO] - 2021-08-31 02:47:52,916 - Agent - : Training at epoch-99 | loss: 0.27289460075181177- Training Acc: 91.44111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:236
+[INFO] - 2021-08-31 02:50:23,575 - Agent - : Validation results at epoch-99 | loss: 0.27915509377315545- Accuracy: 87.83 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:278
+[INFO] - 2021-08-31 02:50:23,694 - Agent - : Please wait while finalizing the operation.. Thank you in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:551
+[WARNING] - 2021-08-31 02:50:23,758 - matplotlib.legend - : No handles with labels found to put in legend. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/legend.py:1193
+[INFO] - 2021-08-31 02:52:55,600 - Agent - : Testing at epoch-99 | loss: 0.27565432311433136- Testing Acc: 91.44111111111111 in /users/jay/Lab2/sig_detect_v3/agents/OneDCNN.py:343
+[WARNING] - 2021-08-31 02:53:04,804 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
+[WARNING] - 2021-08-31 02:53:04,806 - matplotlib.backends.backend_ps - : The PostScript backend does not support transparency; partially transparent artists will be rendered opaque. in /users/jay/.conda/envs/pytorch/lib/python3.7/site-packages/matplotlib/backends/backend_ps.py:735
