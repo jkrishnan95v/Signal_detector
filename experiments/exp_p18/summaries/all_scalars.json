@@ -1,0 +1,1 @@
+{"exp-parameters": {"exp_name": "exp_p18", "numberofsig": "data/0-5source_10snr_100k.h5", "learning_rate": "0.0001", "batch_size": "64"}, "loss": {"training": "0.23350637345743586", "validation": "0.24119385051879155", "testing": "0.2340828512504602"}, "accuracy": {"training": "93.63777777777777", "validation": "90.16", "testing": "90.03"}}
