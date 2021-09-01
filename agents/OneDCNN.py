@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jun  4 11:28:18 2021
-
 @author: jay
-
 Main Agent for our 1DCNN
 """
 import numpy as np
@@ -24,6 +22,7 @@ import scikitplot as skplt
 from sklearn.preprocessing import label_binarize
 from sklearn.metrics import roc_curve, auc
 
+from scipy import interp
 import torch
 from torch import nn
 from torch.backends import cudnn
@@ -33,13 +32,13 @@ from torch.utils.data import Dataset, DataLoader
 
 from datasets.auto_covariances import covariance_dataloader
 from agents.base import BaseAgent
-from graphs.models.onedcnn2 import OneDCNN
-from graphs.models.onedcnn2 import NeuralNet
-from graphs.models.resnet_model import resnet34
-from graphs.models.resnet_m2 import resnet50
+from graphs.models.onedcnn import OneDCNN
+#from graphs.models.onedcnn2 import NeuralNet
+#from graphs.models.resnet_model import resnet34
+#from graphs.models.resnet_m2 import resnet50
 
 from graphs.losses.cross_entropy import CrossEntropyLoss
-
+from sklearn.metrics import roc_auc_score
 '''
 with h5py.File('data/0-4source_20snr_100k.h5','r') as hdf: #Read hdf5 file and converts into a numpy aray
     ls=list(hdf.keys())
@@ -61,8 +60,8 @@ class OneDCNNAgent(BaseAgent):
     def __init__(self, config):
         super().__init__(config)
         # Create an instance from the Model
-        #self.model = OneDCNN(self.config)
-        self.model = resnet50(config)
+        self.model = OneDCNN(self.config)
+        #self.model = resnet50(config)
         #self.model = resnet34(self.config)
         #self.model = NeuralNet(self.config)
         # Create an instance from the data loader
@@ -316,8 +315,8 @@ class OneDCNNAgent(BaseAgent):
             
             pred = self.model(x)
             #device = "cpu"
-            #y = y.to('device')
-            #pred = pred.to('device')
+            y = y.to('cuda')
+            pred = pred.to('cuda')
             # loss
             cur_loss = self.loss(pred, y)
             if np.isnan(float(cur_loss.item())):
@@ -371,6 +370,7 @@ class OneDCNNAgent(BaseAgent):
        # figurep.savefig(self.config.out_dir + 'aplots.png', dpi=1200)
         plt.savefig(self.config.out_dir + 'accuracyplots.png')
         plt.show()
+        dfplot2.to_csv(self.config.out_dir + 'accuracy.csv')
 #        plt.title(('Accuracy')
         #fig2.savefig(self.config.out_dir + 'vaccuracy.png')
         
@@ -442,6 +442,8 @@ class OneDCNNAgent(BaseAgent):
                 labels = labels.squeeze_()
                 outputs = self.model(inputs)
                 _, preds = torch.max(outputs, 1)
+                preds = preds.cpu()
+                labels = labels.cpu()
                 y = preds.flatten().numpy()
         
         df = pd.DataFrame(data={'Predictions': y, 'Number of signals': labels})
@@ -467,6 +469,8 @@ class OneDCNNAgent(BaseAgent):
                 labels = labels.squeeze_()
                 outputs = self.model(inputs)
                 _, preds = torch.max(outputs, 1)
+                preds = preds.cpu()
+                labels = labels.cpu()
                 y = preds.flatten().numpy()
         
         nb_classes = self.config.num_classes
@@ -481,23 +485,46 @@ class OneDCNNAgent(BaseAgent):
         for i in range(nb_classes):
             fpr[i], tpr[i], _ = roc_curve(labels[:, i], y[:, i])
             roc_auc[i] = auc(fpr[i], tpr[i])
-        
+         
+        all_fpr = np.unique(np.concatenate([fpr[i] for i in range(nb_classes)]))
+        mean_tpr = np.zeros_like(all_fpr)
+        for i in range(nb_classes):
+            mean_tpr += interp(all_fpr, fpr[i], tpr[i])
+        mean_tpr /= nb_classes
+        fpr["macro"] = all_fpr
+        tpr["macro"] = mean_tpr
+
+  
+        roc_auc["macro"] = auc(fpr["macro"], tpr["macro"])
+        fig1 = plt.figure()
+        plt.plot(fpr["macro"], tpr["macro"], "r-",label = "ROC curve" )
+        plt.plot([0,1], [0,1], 'k--')
+        plt.legend(loc='lower right')
+        fig1 = plt.gcf()
+        fig1.savefig(self.config.out_dir + "Macro.png")	
+        macro_roc_auc_ovr = roc_auc_score(labels, y, multi_class="ovr",
+                                  average="macro")
+        weighted_roc_auc_ovr = roc_auc_score(labels, y, multi_class="ovr",
+                                     average="weighted")
+        print("One-vs-Rest ROC AUC scores:\n{:.6f} (macro),\n{:.6f} "
+      "(weighted by prevalence)"
+      .format(macro_roc_auc_ovr, weighted_roc_auc_ovr))  
         # Plot of a ROC curve for a specific class
         for i in range(nb_classes):
-            fig = plt.figure()
-            
-            plt.plot(fpr[i], tpr[i],"r-", label='ROC (area = %0.2f)' % roc_auc[i])
+            #fig = plt.figure()
+            plt.plot(fpr[i], tpr[i], label = 'Label %i' %i)
+            #plt.plot(fpr[i], tpr[i],"r-", label='ROC (area = %0.2f)' % roc_auc[i])
             plt.plot([0, 1], [0, 1], 'k--')
             plt.xlim([0.0, 1.0])
             plt.ylim([0.0, 1.05])
             plt.xlabel('False Positive Rate')
             plt.ylabel('True Positive Rate')
             plt.title('ROC')
-            plt.legend(loc="lower right")
-            fig1 = plt.gcf()
+            plt.legend()
+        fig1 = plt.gcf()
             #plt.show()
             #fig.savefig(self.config.out_dir + '%s.eps' % (str(nb_classes[i])), format = 'eps')
-            fig1.savefig(self.config.out_dir + "Instant{}.eps".format(i), format = 'eps')
+        fig1.savefig(self.config.out_dir + "Instant2{}.eps".format(i), format = 'eps')
             #sns.lineplot(x = fpr[i], y = tpr[i], palette = "flare")
             
             #fig.savefig(self.config.out_dir + str(nb_classes[i]) + 'th_roc.png')
