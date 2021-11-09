@@ -21,4 +21,5 @@ The upper triangle of the received auto-correlation matrix is flattened into a o
 # References
 
 [Code template](https://github.com/moemen95/Pytorch-Project-Template)
+
 [Image generation for CNN model](https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network)
