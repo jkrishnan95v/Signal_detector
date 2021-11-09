@@ -4,7 +4,7 @@ This project uses a CNN to perform Radio Signal source detection. A 20 element a
 
 Estimation of the number of sources is an important step in various array processing technologies. It is a prerequisite in most DoA algorithms. This model was succesfull in recognisng upto 6 sources at 20dB of SNR. Output of the code includes plots of the training and validation error, stats(precision,sensitivity, and specificity), a confusion matrix, and the ROC plot of the test data.
 
-
+Contact me at jayakrishnan@unm.edu for the data. Files are too large to be uploaded here. 
 Work ongoing - testing at various SNR and try to resolve more number of signals using alternate architectures. 
 Work submitted for APS-URSI 2021 and for IEEE-TAP special issue on ML 
 
