@@ -74,7 +74,11 @@ for k in range(ITERATIONS):
     signal_dir = np.sort(signal_dir)
     signal_dir_rad = data_gen.convert_to_rad(signal_dir) #DOA to estimate
     number_s = np.asscalar(number_of_coherentsignals[k])
-    x_u = data_gen.generate_correlated_qpsk_signals(signal_dir_rad=signal_dir_rad, sensor_position=uniform_sensor_position, NUMBER_OF_SENSORS=NUMBER_OF_SENSORS, NOISE_VARIANCE=NOISE_VARIANCE, NUMBER_OF_SNAPSHOTS=SNAPSHOTS_PER_REALIZATION, NUMBER_OF_SOURCES=number_s, CARRIER_WAVELENGTH=CARRIER_WAVELENGTH, number_of_correlatedsources=np.asscalar(number_of_correlatedsources[k])) 
+    
+    correlated_aoa = data_gen.generate_random_directions(-SPECTRUM_WIDTH, SPECTRUM_WIDTH, number_of_correlatedsources[k])
+    
+    
+    x_u = data_gen.generate_correlated_qpsk_signals(signal_dir_rad=signal_dir_rad, sensor_position=uniform_sensor_position, NUMBER_OF_SENSORS=NUMBER_OF_SENSORS, NOISE_VARIANCE=NOISE_VARIANCE, NUMBER_OF_SNAPSHOTS=SNAPSHOTS_PER_REALIZATION, NUMBER_OF_SOURCES=number_s, CARRIER_WAVELENGTH=CARRIER_WAVELENGTH, number_of_correlatedsources=np.asscalar(number_of_correlatedsources[k]), correlated_aoa = correlated_aoa) 
     
     
     r_f = [
