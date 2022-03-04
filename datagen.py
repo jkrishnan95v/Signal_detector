@@ -89,21 +89,24 @@ class DataGen:
                 x_u = x_u + noise
             return x_u
         
-    def generate_correlated_qpsk_signals(self, signal_dir_rad, sensor_position, NUMBER_OF_SENSORS, NOISE_VARIANCE, NUMBER_OF_SNAPSHOTS, NUMBER_OF_SOURCES, CARRIER_WAVELENGTH, number_of_correlatedsources):
+    def generate_correlated_qpsk_signals(self, signal_dir_rad, sensor_position, NUMBER_OF_SENSORS, NOISE_VARIANCE, NUMBER_OF_SNAPSHOTS, NUMBER_OF_SOURCES, CARRIER_WAVELENGTH, number_of_correlatedsources, correlated_aoa):
             phi = 2*math.pi*np.sin(np.tile(signal_dir_rad,[NUMBER_OF_SENSORS, 1])) 
-            
-            if NUMBER_OF_SOURCES > number_of_correlatedsources:
-                array_size = NUMBER_OF_SOURCES
-            else :
-                array_size = number_of_correlatedsources
-            D_u = np.tile(sensor_position, [1, array_size])
-            
-            distorted_symbols = np.zeros((NUMBER_OF_SNAPSHOTS, array_size))
-            symbols = np.zeros((NUMBER_OF_SNAPSHOTS, array_size))
-            
             pho = np.zeros(number_of_correlatedsources)
+            
+            pho_aoa = 2*math.pi*np.sin(np.tile(correlated_aoa,[NUMBER_OF_SENSORS, 1])) 
             deltaphi = np.zeros( number_of_correlatedsources)
-            steervec_u = np.exp(1j * phi * (D_u/CARRIER_WAVELENGTH))                            #uniform steering vectors
+            
+            distorted_symbols = np.zeros((NUMBER_OF_SNAPSHOTS, number_of_correlatedsources))
+            symbols = np.zeros((NUMBER_OF_SNAPSHOTS, NUMBER_OF_SOURCES))
+            
+            total_signals = number_of_correlatedsources + NUMBER_OF_SOURCES
+            D_u = np.tile(sensor_position, [1, total_signals])
+            
+            distorted_symbols = np.zeros((NUMBER_OF_SNAPSHOTS, number_of_correlatedsources))
+            symbols = np.zeros((NUMBER_OF_SNAPSHOTS, NUMBER_OF_SOURCES))
+            
+            angles = np.concatenate((phi, pho_aoa), axis = 1)
+            steervec_u = np.exp(1j * angles * (D_u/CARRIER_WAVELENGTH))                            #uniform steering vectors
             symbols = np.sign(np.random.randn(NUMBER_OF_SNAPSHOTS, NUMBER_OF_SOURCES)) + 1j*np.sign(np.random.randn(NUMBER_OF_SNAPSHOTS, NUMBER_OF_SOURCES)) #QPSK symbols
             #distorted_symbols = np.sign(np.random.randn(NUMBER_OF_SNAPSHOTS, array_size)) + 1j*np.sign(np.random.randn(NUMBER_OF_SNAPSHOTS, array_size)) #QPSK symbols
             
@@ -120,12 +123,17 @@ class DataGen:
                 distorted_symbols[:,j] = pho[j]*np.exp(1j*deltaphi[j])*symbols[:,0]
             
             
-            if NUMBER_OF_SOURCES < number_of_correlatedsources:
-                symbols = np.append(symbols,np.zeros([len(symbols),1]),1)
-            symbols = symbols + distorted_symbols
+            # if NUMBER_OF_SOURCES < number_of_correlatedsources:
+            #     symbols = np.append(symbols,np.zeros([len(symbols),1]),1)
+            # symbols = symbols + distorted_symbols
+            # stack symbols and distorted, not add them
+            
+            symbols2 = np.concatenate((symbols, distorted_symbols), axis = 1)
+            
+            
             for i in range(NUMBER_OF_SNAPSHOTS):
                 
-                x_u[:,i] = np.sum(np.tile(symbols[i,:],[NUMBER_OF_SENSORS, 1])*steervec_u,1)  #uniformly sampled data
+                x_u[:,i] = np.sum(np.tile(symbols2[i,:],[NUMBER_OF_SENSORS, 1])*steervec_u,1)  #uniformly sampled data
                 noise = NOISE_VARIANCE * np.random.randn(x_u.shape[0],x_u.shape[1]) + 1j * NOISE_VARIANCE * np.random.randn(x_u.shape[0],x_u.shape[1])  
                 x_u = x_u + noise
                 
