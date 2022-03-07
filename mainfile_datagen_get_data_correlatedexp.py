@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Mon Mar 30 16:59:19 2020
@@ -71,8 +71,11 @@ for k in range(ITERATIONS):
     signal_dir = data_gen.generate_random_directions(-SPECTRUM_WIDTH, SPECTRUM_WIDTH, NUMBER_OF_SIGNALS)
     signal_dir = np.sort(signal_dir)
     signal_dir_rad = data_gen.convert_to_rad(signal_dir) #DOA to estimate
+    
+    correlated_aoa = data_gen.generate_random_directions(-SPECTRUM_WIDTH, SPECTRUM_WIDTH, number_of_correlatedsources)
+    
    # number_s = np.asscalar(NUMBER_OF_SIGNALS)
-    x_u = data_gen.generate_correlated_qpsk_signals(signal_dir_rad=signal_dir_rad, sensor_position=uniform_sensor_position, NUMBER_OF_SENSORS=NUMBER_OF_SENSORS, NOISE_VARIANCE=NOISE_VARIANCE, NUMBER_OF_SNAPSHOTS=SNAPSHOTS_PER_REALIZATION, NUMBER_OF_SOURCES=NUMBER_OF_SIGNALS, CARRIER_WAVELENGTH=CARRIER_WAVELENGTH, number_of_correlatedsources=number_of_correlatedsources) 
+    x_u = data_gen.generate_correlated_qpsk_signals(signal_dir_rad=signal_dir_rad, sensor_position=uniform_sensor_position, NUMBER_OF_SENSORS=NUMBER_OF_SENSORS, NOISE_VARIANCE=NOISE_VARIANCE, NUMBER_OF_SNAPSHOTS=SNAPSHOTS_PER_REALIZATION, NUMBER_OF_SOURCES=NUMBER_OF_SIGNALS, CARRIER_WAVELENGTH=CARRIER_WAVELENGTH, number_of_correlatedsources=number_of_correlatedsources, correlated_aoa=correlated_aoa) 
     
     pho = np.zeros(number_of_correlatedsources)
     deltaphi = np.zeros( number_of_correlatedsources)
