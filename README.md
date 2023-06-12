@@ -6,7 +6,7 @@ Estimation of the number of sources is an important step in various array proces
 
 Contact me at jayakrishnan@unm.edu for the data. Files are too large to be uploaded here. 
 Work ongoing - testing at various SNR and try to resolve more number of signals using alternate architectures. 
-Work submitted for APS-URSI 2021 and for IEEE-TAP special issue on ML 
+
 
 # Architecture 
 
