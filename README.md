@@ -18,6 +18,8 @@ The upper triangle of the received auto-correlation matrix is flattened into a o
 
 ![conf_20db](https://user-images.githubusercontent.com/20204692/132585583-ef567dd6-ec27-4d19-8d3a-707343d8e87a.png)
 
+#Updated work published at - https://ieeexplore.ieee.org/document/10137757
+
 # References
 
 [Code template](https://github.com/moemen95/Pytorch-Project-Template)
